@@ -9,27 +9,28 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import iut.qualite.suite.Fibonacci;
+import iut.qualite.suite.SuiteFibonacci;
 
 class FibonacciTest {
 
 	@Test
 	void suiteRecursiveTest() {
-		assertEquals(Fibonacci.suiteRecursive(0), BigInteger.ZERO);
-		assertEquals(Fibonacci.suiteRecursive(1), BigInteger.ONE);
+		assertThrows(IndexOutOfBoundsException.class, () -> SuiteFibonacci.suiteRecursive(-1));
+		assertEquals(SuiteFibonacci.suiteRecursive(0), BigInteger.ZERO);
+		assertEquals(SuiteFibonacci.suiteRecursive(1), BigInteger.ONE);
 		
-		assertEquals(Fibonacci.suiteRecursive(10), BigInteger.valueOf(55));
-		assertEquals(Fibonacci.suiteRecursive(70), new BigInteger("190392490709135"));
-		assertEquals(Fibonacci.suiteRecursive(106), new BigInteger("6356306993006846248183"));
+		assertEquals(SuiteFibonacci.suiteRecursive(10), BigInteger.valueOf(55));
+		assertEquals(SuiteFibonacci.suiteRecursive(70), new BigInteger("190392490709135"));
+		assertEquals(SuiteFibonacci.suiteRecursive(106), new BigInteger("6356306993006846248183"));
 	}
 	
 	@Test
 	void suiteIterativeTest() {
-		assertEquals(Fibonacci.suiteIterative(0), BigInteger.ZERO);
-		assertEquals(Fibonacci.suiteIterative(1), BigInteger.ONE);
+		assertEquals(SuiteFibonacci.suiteIterative(0), BigInteger.ZERO);
+		assertEquals(SuiteFibonacci.suiteIterative(1), BigInteger.ONE);
 		
-		assertEquals(Fibonacci.suiteIterative(10), BigInteger.valueOf(55));
-		assertEquals(Fibonacci.suiteIterative(70), new BigInteger("190392490709135"));
-		assertEquals(Fibonacci.suiteIterative(106), new BigInteger("6356306993006846248183"));
+		assertEquals(SuiteFibonacci.suiteIterative(10), BigInteger.valueOf(55));
+		assertEquals(SuiteFibonacci.suiteIterative(70), new BigInteger("190392490709135"));
+		assertEquals(SuiteFibonacci.suiteIterative(106), new BigInteger("6356306993006846248183"));
 	}
 }
