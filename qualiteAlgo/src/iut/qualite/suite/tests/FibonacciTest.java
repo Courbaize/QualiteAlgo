@@ -1,10 +1,15 @@
-package qualiteAlgo.iut.fibonacci;
+package iut.qualite.suite.tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.math.BigInteger;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
+
+import iut.qualite.suite.Fibonacci;
 
 class FibonacciTest {
 
