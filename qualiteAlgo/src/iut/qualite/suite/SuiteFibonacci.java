@@ -13,6 +13,8 @@ import java.util.List;
  */
 public class SuiteFibonacci {
 	
+	private int RANG_MAX = 7000;
+	
 	/**
 	 * Valeur de la suite de SuiteFibonacci. 
 	 * SuiteFibonacci(i) = suiteFibonacci.get(i)
@@ -27,7 +29,7 @@ public class SuiteFibonacci {
 	 */
 	public static BigInteger suiteRecursive(int pIndice) {
 		
-		if (pIndice < 0) {
+		if (0 > pIndice || pIndice > 7000) {
 			throw new IndexOutOfBoundsException("Indice inférieur à 0");
 		}
 		

@@ -11,11 +11,16 @@ import org.junit.jupiter.api.Test;
 
 import iut.qualite.suite.SuiteFibonacci;
 
-class FibonacciTest {
+class SuiteFibonacciTest {
 
 	@Test
-	void suiteRecursiveTest() {
+	void suiteRecursiveTestEchec() {
 		assertThrows(IndexOutOfBoundsException.class, () -> SuiteFibonacci.suiteRecursive(-1));
+		assertThrows(IndexOutOfBoundsException.class, () -> SuiteFibonacci.suiteRecursive(8000));
+	}
+	
+	@Test
+	void suiteRecursiveTestOk() {
 		assertEquals(SuiteFibonacci.suiteRecursive(0), BigInteger.ZERO);
 		assertEquals(SuiteFibonacci.suiteRecursive(1), BigInteger.ONE);
 		
